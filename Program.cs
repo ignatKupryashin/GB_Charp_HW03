@@ -56,11 +56,28 @@ void Task21()
     double dist = Math.Sqrt((Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2)));
     dist = Math.Round(Math.Sqrt((dist + Math.Pow(z1 - z2, 2))), 2);
     Console.WriteLine($"Дистанция между двумя точками составляет {dist}");
-
+    Console.WriteLine(""); //пустая строка для красоты
 
 }
 //Задача 23
 //Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 
-//Task19();
-//Task21();
+void Task23()
+{
+    Console.WriteLine(""); //пустая строка для красоты
+    Console.WriteLine("Данная программа выводит таблицу квадратов от введённого числа до 1");
+    Console.Write("Введите число n: ");
+    int n = Convert.ToInt32(Console.ReadLine());
+    n = Math.Abs(n);
+    Console.WriteLine($"Введено число {n}.");
+    while (n > 0)
+    {
+        Console.WriteLine(n * n * n);
+        n--;
+    }
+    Console.WriteLine(""); //пустая строка для красоты
+
+}
+Task19();
+Task21();
+Task23();

@@ -35,10 +35,32 @@ void Task21()
     Console.WriteLine(""); //пустая строка для красоты
     Console.WriteLine("Данная программа вычисляет расстояние между двумя точкам ивв 3D пространстве");
     Console.Write("Введите координату x1: ");
-    int x1 = Convert.ToInt32(Console.ReadLine());
+    double x1 = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите координату y1: ");
+    double y1 = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите координату z1: ");
+    double z1 = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine($"Координата первой точки {x1},{y1},{z1}");
+
+    Console.Write("Введите координату x2: ");
+    double x2 = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите координату y2: ");
+    double y2 = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите координату z2: ");
+    double z2 = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine($"Координата второй точки {x2},{y2},{z2}");
+
+
+    double dist = Math.Sqrt((Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2)));
+    dist = Math.Round(Math.Sqrt((dist + Math.Pow(z1 - z2, 2))), 2);
+    Console.WriteLine($"Дистанция между двумя точками составляет {dist}");
+
 
 }
 //Задача 23
 //Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 
-Task19();
+//Task19();
+//Task21();
